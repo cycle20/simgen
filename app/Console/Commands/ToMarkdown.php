@@ -17,7 +17,7 @@ class ToMarkdown extends Command
 
     protected function configure(): void
     {
-        $this->addArgument('path', InputArgument::REQUIRED, 'Base directory of a Laravel/PHP project');
+        $this->addArgument('path', InputArgument::OPTIONAL, 'Base directory of a Laravel/PHP project', '.');
         $this->addOption('output', null, InputOption::VALUE_OPTIONAL, 'Output Markdown file path', 'php_files.md');
 
         // Individual include options
